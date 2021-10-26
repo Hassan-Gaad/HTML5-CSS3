@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style>
+        #fig {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    border: 2px solid #aaaaaa;
+}
+    </style>
+</head>
+
+<body>
+
+	<p>Drag the Doggo logo into the square:</p>
+
+	<div id="fig" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>
+
+	<img id="drag" src="pom-laptop.webp" draggable="true" ondragstart="dragThis(event)" width="200" height="200">
+
+    <script>
+        function allowDropThis(i) {
+    i.preventDefault();
+}
+
+function dragThis(i) {
+    i.dataTransfer.setData("doggo", i.target.id);
+}
+
+function dropThis(i) {
+    i.preventDefault();
+    var data = i.dataTransfer.getData("doggo");
+    i.target.appendChild(document.getElementById(data));
+    document.getElementById("fig").style.backgroundColor="red";
+}
+    </script>
+</body>
+</html>

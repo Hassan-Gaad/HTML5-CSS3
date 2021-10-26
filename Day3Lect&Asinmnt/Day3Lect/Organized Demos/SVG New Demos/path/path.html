@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+M = move to
+L = line to
+H = horizontal lineto
+V = vertical lineto
+C = curve to
+S = smooth curveto
+Q = quadratic Bézier curve
+T = smooth quadratic Bézier curveto
+A = elliptical Arc
+Z = closepath -->
+
+
+<!-- The example below defines a path that starts at position 150,0 with a line to position 75,200 
+    then from there, a line to 225,200 and finally closing the path back to 150,0: -->
+    <svg height="210" width="400">
+        <path d="M150 0 L75 200 L225 200 Z" />
+      </svg>
+
+
+      <!-- The <text> element is used to define a text. -->
+        <svg height="30" width="200">
+            <text x="0" y="15" fill="red">I love SVG!</text>
+          </svg>
+
+
+          <svg height="60" width="200">
+            <text x="0" y="15" fill="red" transform="rotate(30 20,40)">I love SVG</text>
+          </svg>
+
+          <!-- serveral text -->
+          <svg height="90" width="200">
+            <text x="10" y="20" style="fill:red;">Several lines:
+              <tspan x="10" y="45">First line.</tspan>
+              <tspan x="10" y="70">Second line.</tspan>
+            </text>
+          </svg>
+</body>
+</html>

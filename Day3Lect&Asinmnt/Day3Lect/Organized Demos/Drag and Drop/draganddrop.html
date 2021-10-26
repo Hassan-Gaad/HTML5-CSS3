@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fig1, #fig2 {
+    float: left;
+    width: 220px;
+    height: 220px;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid blue;
+}
+    </style>
+</head>
+<body>
+
+<h2>Drag and Drop</h2>
+
+<p>Drag Doggo between these the two elements.</p>
+
+<div id="fig1" ondrop="dropThis(event)" ondragover="allowDropThis(event)" >
+  <img src="https://cdn.bitdegree.org/learn/pom-laptop.png?raw=true" draggable="true" ondragstart="dragThis(event)" id="drag1" width="220" height="220">
+</div>
+
+<div id="fig2" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>
+
+<script>
+    function allowDropThis(i) {
+    i.preventDefault();
+}
+
+function dragThis(i) {
+    i.dataTransfer.setData("doggo", i.target.id);
+}
+
+function dropThis(i) {
+    i.preventDefault();
+    var data = i.dataTransfer.getData("doggo");
+    i.target.appendChild(document.getElementById(data));
+   
+}
+</script>
+</body>
+</html>

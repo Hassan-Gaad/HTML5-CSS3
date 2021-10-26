@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="mycanavs" width="500" height="500">
+        Your browser not supported canvas
+    </canvas>
+    <script>
+        window.onload = function()
+        {
+            var canvas = document.getElementById("mycanavs");
+        // step2: creating a drawing object
+        var ctx = canvas.getContext("2d");
+        ctx.translate(200,250);
+        ctx.fillStyle="rgba(0,128,250,.3)";
+        setInterval(function(){
+            ctx.rotate(.2*Math.PI);
+            ctx.fillRect(10,0,150,50);
+
+        },500);
+
+
+        }
+        // step1 : find canvas element 
+       
+
+
+
+    </script>
+</body>
+
+</html>

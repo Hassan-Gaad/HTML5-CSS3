@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/Q1.css">
+</head>
+
+<body>
+    <div>
+        <h1>Score</h1>
+        <h5 id="score"></h5>
+    </div>
+    <div id="dropArea" ondragover="allowDropThis(event)" ondrop="dropThis(event)"></div>
+    <img id="cateImg1" src="../img/pom-laptop.webp" alt="pom-lap-img" ondragstart="dragThis(event)" draggable="true">
+    <img id="cateImg2" src="../img/pom-laptop.webp" alt="pom-lap-img" ondragstart="dragThis(event)" draggable="true">
+    <img id="cateImg3" src="../img/pom-laptop.webp" alt="pom-lap-img" ondragstart="dragThis(event)" draggable="true">
+
+    <script>
+
+        var noOfDrop;
+        function allowDropThis(evt) {
+            evt.preventDefault();
+        }
+
+        function dropThis(evt) {
+            if (sessionStorage.getItem("no-of-drops")) {
+                sessionStorage.setItem("no-of-drops",parseInt(sessionStorage.getItem("no-of-drops"))+1);
+                document.getElementById("score").innerText=sessionStorage.getItem("no-of-drops");
+            } else {
+                sessionStorage.setItem("no-of-drops",1);
+            }
+
+            evt.preventDefault();
+            console.log(evt.target);
+            evt.target.style.backgroundColor = "lightblue";
+
+            var data = evt.dataTransfer.getData("cat");//holds the id of the image
+            if (data == "cateImg2") {
+                //target: a reference to the object onto which the event was dispatched
+                evt.target.appendChild(document.getElementById(data));
+            }
+
+        }
+
+        function dragThis(evt) {
+            evt.dataTransfer.setData("cat", evt.target.id);
+        }
+
+        function countDragAndDrop() {
+            sessionStorage.setItem("no-of-drops", noOfDrops);
+
+        }
+
+        onload = function () {
+            document.getElementById("score").innerText = sessionStorage.getItem("no-of-drops") ? sessionStorage.getItem("no-of-drops") : "no scores found";
+        }
+
+    </script>
+</body>
+
+</html>

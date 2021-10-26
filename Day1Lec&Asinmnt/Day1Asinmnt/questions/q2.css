@@ -1,0 +1,25 @@
+.col{
+    display: table-cell;
+    width: 200px;
+}
+
+label{
+    display: block;
+    margin-top: 14px;
+
+}
+
+#btnSubmit{
+    display: block;
+    position: relative;
+    top: 26px;
+}
+form{
+    background-color: lightgray;
+    padding: 20px 20px;
+    max-width: fit-content;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+

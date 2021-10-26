@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="button" value="count" onclick="countclick()">
+    <div id="ResultSession"></div>
+    <div id="countVariable"></div>
+
+    <script>
+        var counter=1;
+        function countclick()
+        {
+            if(sessionStorage.clickcount)
+            {
+                sessionStorage.clickcount=parseInt(sessionStorage.clickcount)+1;
+                counter++;
+            }
+            else{
+                sessionStorage.clickcount=1;
+            }
+            
+            document.getElementById("ResultSession").innerHTML="You have clicked the button " + sessionStorage.clickcount;
+            document.getElementById("countVariable").innerHTML="Counter value is = " +counter;
+
+
+        }
+    </script>
+    
+</body>
+</html>

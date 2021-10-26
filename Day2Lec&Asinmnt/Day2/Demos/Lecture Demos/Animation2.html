@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes sectionAnimation{
+            0%{
+                top: 10px;
+                left: 10px;
+                background-color: red;
+
+            }
+            25%{
+                top:10px;
+                left:200px;
+                background-color: yellow;
+            }
+            50%{
+                left:200px;
+                top: 200px;
+                background-color: violet;
+            }
+            75%{
+                left: 10px;
+                top: 200px;
+                background-color: blue;
+            }
+        }
+        body{
+            position: relative;
+        }
+        section{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            animation: sectionAnimation;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-direction:normal;
+            position: absolute;
+        }
+        section:hover{
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fig,#fig1{
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 2px solid violet;
+        }
+    </style>
+</head>
+<body ondrop="dropThis(event)" ondragover="allowDropThis(event)">
+    <div id="fig" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>
+   <!-- <div id="fig1" ondrop="dropThis(event)" ondragover="allowDropThis(event)"> -->
+
+    <img id="drag" src="pom-laptop.webp" width="200" height="200" draggable="true"
+     ondragstart="dragThis(event)">
+   <!-- </div> -->
+    
+<script>
+   function allowDropThis(i){
+        i.preventDefault();
+    }
+    function dragThis(i)
+    {
+        // setData("key",value)
+        i.dataTransfer.setData("dog",i.target.id);
+    }
+    function dropThis(i)
+    {
+        i.preventDefault();
+        var data=i.dataTransfer.getData("dog");
+        i.target.appendChild(document.getElementById(data));
+
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+ /* All elements */
+ *{
+    padding: 0;
+    margin: 0;
+}
+
+#mainHeader,#mainFooter{
+    background-color: lightgray;
+    padding: 10px;
+    text-align: center;
+    margin: 5px;
+}
+
+#mainHeader>p,#mainFooter>p{
+    text-align: center ;
+    font: bold 12px tahoma;
+
+}
+#mainNav{
+    background-color: lightgray;
+    height: 30px;
+    text-align: center;
+    margin: 5px;
+}
+
+
+#mainSection{
+    float: left;
+    width: 500px;
+    background-color: lightgray;
+}
+
+#mainAsidLeft{
+    float: left;
+    width: 500px;
+    background-color: lightgray;
+    margin: 10px;
+}
+
+
+#mainAsideRight{
+    float: right;
+    width: 250px;
+    background-color: lightgray;
+    margin: 10px;
+
+}
+
+
+#mainFooter{
+    clear: both;
+}
+
+

@@ -1,0 +1,32 @@
+nav{
+    background-color: darkslategray;
+    width: 500px;
+    margin: auto;
+    border: 1px  ;
+    border-radius: 10px;
+}
+li{
+    display: inline-block;
+    width: 50px;
+    padding: 15px;
+    list-style: none;
+    transition-property: color;
+    transition-duration: .7s;
+    text-align: center;
+}
+
+li:hover{
+    background-color: greenyellow;
+}
+
+i{
+    font-size: 34px;
+    color: white;
+    transition-property: color;
+    transition-duration: .7s;
+
+}
+
+i:hover{
+    color: darkslategray;
+}

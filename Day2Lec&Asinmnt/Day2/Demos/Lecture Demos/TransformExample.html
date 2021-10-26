@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 700px;
+            height: 200px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            margin-left: 10px;
+            border-radius: 50%;
+            opacity: 0.5;
+            transform: rotate(-10deg);
+            /* transition-property: all;
+            transition-duration: 2s; */
+            transition: all 2s;
+        }
+        img:hover
+        {
+            transform: rotate(0) scale(1.2);
+            opacity: 1;
+        }
+        img:active{
+            transform: scale(.5);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <img src="images/1.jpg" />
+        <img src="images/1.jpg" />
+        <img src="images/1.jpg" />
+        <img src="images/1.jpg" />
+    </section>
+</body>
+</html>

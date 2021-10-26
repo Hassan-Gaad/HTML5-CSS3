@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #rec{
+            fill-opacity: .1;
+            stroke-opacity: .5;
+        }
+    </style>
+</head>
+<body>
+    <svg>
+        <!-- cx ,cy -->
+        <circle id="c1" cx="50" cy="50" r="40" stroke="black" fill="red" stroke-width="6px" />
+    </svg>
+
+    <svg>
+       <ellipse cx="200" cy="70" rx="100" ry="50" style="fill:orange;stroke:palevioletred;stroke-width:2"/>
+    </svg>
+<br>
+
+    <svg>
+          <rect id="rec" width="300" height="100"  style="fill:orange;stroke:palevioletred;stroke-width:2"/>
+     </svg>
+<br>
+<br>
+<br>
+     <svg width="400" height="110">
+        <rect  x="50" y="20" width="150" height="80"  style="fill:orange;stroke:palevioletred;stroke-width:6"/>
+   </svg>
+   <br>
+   <br>
+   <br>
+   <svg width="400" height="110">
+    <rect  x="50" y="20" rx="20" ry="20" width="150" height="80"  style="fill:orange;stroke:palevioletred;stroke-width:6"/>
+</svg>
+
+<br>
+<br>
+<br>
+<svg width="500" height="250">
+ <polygon points="200,10 250,180 160,210 190,80" style="fill:palevioletred;stroke:red;stroke-width:2"/>
+</svg>
+
+
+<br>
+<br>
+<br>
+<svg width="500" height="250">
+ <polyline points="20,20 40,20 60,40 80,120 200,150" style="fill:blue;stroke:red;stroke-width:2"/>
+</svg>
+
+<br>
+<br>
+<br>
+<svg width="500" height="250">
+ <line x1="0" y1="0" x2="100" y2="200" style="stroke:red;stroke-width:2"/>
+</svg>
+
+<br>
+<br>
+<br>
+<!-- M = move to
+    L = line to
+    H 
+    V
+    C
+    S
+    A
+    Z closepath
+
+
+
+-->
+<svg width="500" height="250">
+ <path d="M150 0 L75 200 L220 200 Z"/>
+</svg>
+
+
+<svg  width="100" height="250">
+    <text x="10" y="20" fill="blue">Hello
+        <tspan x="10" y="45">First</tspan>
+        <tspan x="10" y="60">second</tspan>
+    </text>
+</svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script>
+        document.getElementById("c1").onclick=function()
+        {
+            document.getElementById("c1").style.fill="transparent";
+        }
+    </script> -->
+</body>
+</html>

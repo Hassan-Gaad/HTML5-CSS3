@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="getLocation()">Go to location</button>
+    <p id="demo"></p>
+
+    <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            // 1- check availibilty of geolocation object inside navigator
+
+            if (navigator.geolocation) {
+                // avaiable
+                //2- getPermission => getcurrentposition() => exist inside geolocation object
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+
+
+            } else {
+                // not available
+                x.innerHTML = "Geolocation in not supported in this browser";
+
+            }
+
+        }
+
+        function showPosition(position) {
+            console.log(position);
+            var lat = position.coords.latitude;
+            console.log(position.coords);
+            var log = position.coords.longitude;
+            console.log(position.coords.longitude);
+
+            x.innerHTML = "Latitude" + lat + "<br>Longitude" + log;
+            var url = "http://maps.google.com/maps?q=" + lat + "," + log;
+            alert(url);
+            window.open(url, '_blank');
+
+        }
+
+        function showError(error) {
+            console.log(error);
+            console.log(error.code);
+            switch (error.code) {
+                
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = "User denied request for geolocation";
+                    console.log(error.PERMISSION_DENIED);
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "Information not available";
+                    break;
+
+                    case error.TIMEOUT:
+                    x.innerHTML = "Request is timed out";
+                    break;
+
+
+                    case error.UNKNOWN_ERROR:
+                    x.innerHTML = "An unknown error occured";
+                    break;
+
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

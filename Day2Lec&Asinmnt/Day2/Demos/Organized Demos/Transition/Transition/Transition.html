@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: violet;
+            /* css property a transition effect*/
+            transition-property: all;
+            /* how many seconds a transition effect take time */
+            transition-duration: 2s;
+            /* specifies the speed curve of the transition effect */
+            transition-timing-function: linear;
+            /* specfies delay in seconds for transition effect*/
+            transition-delay: 1s ;
+
+            /* transition: property duration timing-function delay */
+            
+
+
+        }
+        div:hover
+        {
+
+            transform: rotate(400deg);
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Transition -->
+    <div></div>
+</body>
+</html>

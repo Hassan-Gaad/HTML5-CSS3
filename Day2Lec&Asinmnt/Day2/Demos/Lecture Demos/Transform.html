@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #translate{
+            transform: translate(50px,100px);
+
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+        } */
+        /* #rotate{
+            transform: rotate(70deg);
+            
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        } */
+        /* #skew{
+            width: 100px;
+            height: 100px;
+            background-color: red;  */
+        /* transform: skew(10deg,20deg); */
+        /* transform: skewX(30deg); */
+        /* transform: skewY(40deg);
+            -ms-transform: skewY(40deg);
+            -moz-transform: skewY(40deg);
+            -webkit-transform: skewY(40deg);
+            -o-transform: skewY(40deg);
+        } */
+        #scale {
+            width: 100px;
+            height: 100px;   
+            background-color: green;
+            /* width = two times width,height = increase 3 times */
+            /* transform: scale(.5,.5);  */
+
+            transform: skew(30deg) scale(2,2) rotate(40deg) translate(10px,20px);
+        }
+        #matrix{
+            width: 100px;
+            /* matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()) */
+            transform: matrix(.866,.5,-0.5,1,0,0);
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="translate">This is div to translate</div>
+    <div id="rotate">This is div to rotate</div>
+    <div id="skew">This is div to skew</div>
+    <div id="scale" style="margin-left: 50px;">This is div to scale</div>
+    <!--  -->
+    <div id="matrix" style="margin-left: 50px;">This is div to matrix</div>
+
+</body>
+
+</html>

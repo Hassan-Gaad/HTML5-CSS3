@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!doctype html>
+    <html>
+
+    <head>
+        <title>Web Forms API</title>
+
+        <style>
+            label {
+                margin-top: 20px;
+                display: block;
+            }
+
+            input {
+                width: 200px;
+            }
+
+            .col {
+                display: table-cell;
+                width: 300px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Forms</h1>
+        <form>
+            <label for="search">Search: </label>
+            <input type="search" id="search" name="search">
+            <input type="submit" value="Search!">
+
+
+            <div class="col">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="First & second" required>
+
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="e mail" required>
+
+
+
+                <label for="url">URL:</label>
+                <input type="url" id="url" name="url" required>
+
+
+
+                <label for="phone">Telephone</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="yearsInDev">Number of Years in Development:</label>
+                <input type="number" id="yearsInDev" name="yearsInDev" min="5" max="40" step="3">
+
+
+                <label for="devExperienceRange">Development Experience Range:</label>
+                <input type="range" id="devExperienceRange" name="devExperienceRange"
+                
+                min="0" max="100" step="1" value="50"
+                
+                >
+                <span id="rangeValue"></span>
+
+            </div>
+
+
+
+            <div class="col">
+                <label for="bgcolor">Background Color</label>
+                <input type="color" id="bgcolor" name="bgcolor" value="rgb(128,0,0)">
+                <button type="button" onclick="getValue()">Get Color</button>
+        
+
+
+                <label for="arrivalDate">Arrival Date</label>
+                <input type="date" id="arrivalDate" name="arrivalDate" 
+                value="2015-03-10" min="2015-01-01" max="2020-12-21">
+
+
+                <label for="arrivalDT">Arrival Date/Time</label>
+                <input type="datetime" id="arrivalDT" name="arrivalDT"
+                 placeholder="2015-01-01 09:30:00 UTC">
+
+                <label for="arrivalDTLocal">Arrival Date/Time</label>
+                <input type="datetime-local" 
+                    id="arrivalDTLocal" name="arrivalDTLocal"
+                    value="2011-01-01 09:30:00" >
+
+                <label for="arrivalTime">Arrival Time</label>
+                <input type="time" id="arrivalTime" name="arrivalTime" value="09:30:00">
+
+                <label for="birthMonth">Birth Month</label>
+                <input type="month" id="birthMonth" name="birthMonth" value="1996-05">
+
+                <label for="vacationWeek">Vacation Week</label>
+                <input type="week" id="vacationWeek" name="vacationWeek" value="2011-W25">
+            </div>
+
+
+            <br>
+            <input type="submit" value="submit">
+        </form>
+
+
+        <script>
+            // Range
+            var rangeValue = document.getElementById("rangeValue");
+            var devExperience= document.getElementById("devExperienceRange");
+            devExperience.onchange = function()
+            {
+                rangeValue.innerText=this.value;
+            }
+            rangeValue.innerHTML=devExperience.value;
+
+            // For get color
+            function getValue() {
+                var color=document.getElementById("bgcolor").value;
+                alert(color);
+            }
+        </script>
+
+
+    </body>
+
+    </html>
+
+</body>
+
+</html>

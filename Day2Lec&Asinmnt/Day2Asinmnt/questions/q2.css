@@ -1,0 +1,13 @@
+@font-face {
+    font-family: myFont;
+    src: url('./fonts/LemonJellyPersonalUse-dEqR.ttf');
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+
+}
+h2{
+    font-family: myFont ,Tahoma;
+    font-size: 30pt;
+}

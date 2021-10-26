@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mark element</h1>
+    <p>Hello <mark style="background-color: red;">Front</mark> world</p>
+
+
+
+    <meter id="meter1" min="0" max="10" value="11" high="4">
+
+        2 of 10
+    </meter>
+<br>
+
+    <label for="meter2">Disk use C: </label>
+    <meter id="meter2" value="0.6">
+
+        60%
+    </meter>
+    <span id="meterValue"></span>
+
+<br>
+    <label for="file">Downloading Progress: </label>
+    <progress id="file" value="0" max="5">40%</progress>
+
+    <span id="rangeValue"></span>
+
+<br>
+
+    <p>Date of  <time datetime="2022-05-15 20:00">Eid Elfetr Day 2022-05-15 20:00</time></p>
+
+
+<script>
+    // For progress
+    var progress=document.getElementById("file");
+    var counter=0;
+
+    var fileLoading=setInterval(function(){
+
+        if(counter>100)
+        {
+            clearInterval(fileLoading);
+            alert("Loaded Completed");
+        }
+        document.getElementById("file").value=++counter;
+        document.getElementById("rangeValue").innerHTML=progress.value + "%";
+    },100);
+
+
+
+
+
+    // For Meter
+    var meter=document.getElementById("meter2");
+    document.getElementById("meterValue").innerHTML=meter.value;
+</script>
+</body>
+</html>

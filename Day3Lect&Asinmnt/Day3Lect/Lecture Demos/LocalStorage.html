@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form > 
+        <input type="text" id="user" placeholder="Name" name="Name">
+        <input type="text" id="age" placeholder="Age" name="Age">
+        <hr>
+        <input type="button" value="set" onclick="setLocalStorage()">
+        <input type="button" value="get" onclick="getLocalStorage()">
+        <input type="button" value="Delete" onclick="removeLocalStorage()">
+    </form>
+
+    <script>
+        function setLocalStorage()
+        {
+            // localstorage 
+            // setItem("key",value)
+            localStorage.setItem("user",document.getElementById("user").value);
+            // or
+            // localStorage.user1=document.getElementById("user").value;
+            localStorage.age1=document.getElementById("age").value;
+            alert("Data Saved");
+
+            
+        }
+        function getLocalStorage()
+        {
+            // getItem("key")
+            if(localStorage.user)
+            document.getElementById("user").value=localStorage.getItem("user");
+
+            if(localStorage.age1)
+            document.getElementById("age").value=localStorage.age1;
+
+
+
+        }
+        function removeLocalStorage()
+        {
+            // removeItem("Key")
+            localStorage.removeItem("user");
+            localStorage.removeItem("age1");
+            alert("Data removed");
+        }
+
+    </script>
+</body>
+</html>

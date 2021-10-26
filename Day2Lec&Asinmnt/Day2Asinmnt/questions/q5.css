@@ -1,0 +1,10 @@
+body{
+    width: 700px;
+    margin: auto;
+}
+
+p{
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 1px solid lightgray;
+}

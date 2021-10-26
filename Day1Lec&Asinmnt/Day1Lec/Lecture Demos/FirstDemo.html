@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* All elements */
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #main{
+            width: 800px;
+            /* border : width style color */
+            border: 1px solid black;
+            /* 10px => top ,bottom  */
+            /* auto => left , right */
+            margin: 10px auto;
+           
+        }
+        #mainHeader,#mainFooter{
+            background-color: lightgray;
+            /* from top , bottom ,left ,right take 10px => padding */
+            padding: 10px;
+        }
+
+        #mainHeader>p,#mainFooter>p{
+            text-align: center ;
+            font: bold 12px tahoma;
+            /* font-size: 12px;
+            font-weight: bold;
+            font-family: tahoma; */
+        }
+        #mainNav{
+            background-color: lightskyblue;
+        }
+        li{
+            list-style: none;
+            display: inline-block;
+            margin: 10px;
+            width: 100px;
+            color: white;
+        }
+        li:hover{
+            color: red;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        #mainSection{
+            float: left;
+            width: 500px;
+            background-color: lightgoldenrodyellow;
+        }
+
+        article{
+            border: 1px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+        article>footer{
+            border-top: 2px dashed black;
+        }
+
+        #mainAside{
+            float: right;
+            width: 250px;
+            background-color: lightgoldenrodyellow;
+        }
+        #mainAside>p{
+            border: 1px solid black;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* p:nth-child(1) */
+        /* p:nth-child(3) */
+        #mainAside > p:nth-child(odd)
+        {
+            background-color: lightgreen;
+
+        }
+        #mainAside > p:nth-child(even)
+        {
+            background-color: lightpink;
+        }
+
+
+
+        #mainFooter{
+            /* left , right */
+            clear: both;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <header id="mainHeader">
+            <p>Front End Track</p>
+        </header>
+        <nav id="mainNav">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+
+        </nav>
+
+        <section id="mainSection">
+            <article>
+
+                <header>
+                    <h2>
+                        Article one-Header
+                    </h2>
+                </header>
+                <footer>
+                    <p>CopyRights &copy; Reserved to auther one</p>
+                </footer>
+            </article>
+
+
+
+            <article>
+                <header>
+                    <h2>
+                        Article two-Header
+                    </h2>
+                </header>
+                <footer>
+                    <p>CopyRights &copy; Reserved to auther two</p>
+                </footer>
+            </article>
+        </section>
+
+        <aside id="mainAside">
+            <p>ITI Qena</p>
+            <p>ITI Sohag</p>
+            <p>ITI Smart</p>
+            <p>ITI Alex</p>
+            <!-- <img src="img.jpg" width="250" height="100"> -->
+        </aside>
+        <footer id="mainFooter">
+            <p>CopyRights &copy; Reserved to Students</p>
+        </footer>
+        <!-- <address>Street 10</address> -->
+
+
+    </div>
+
+</body>
+
+</html>
